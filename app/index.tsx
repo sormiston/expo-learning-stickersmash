@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#25292e",
-    gap: 30
+    gap: 30,
   },
   text: {
     color: "#fff",
