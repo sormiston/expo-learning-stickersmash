@@ -1,13 +1,18 @@
-import { Link } from "expo-router";
-import { StyleSheet, Text, View } from "react-native";
+import { Image } from "expo-image";
+import { StyleSheet, View } from "react-native";
+
+import PlaceholderImage from "@/assets/images/background-image.png";
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Edit app/index.tsx to edit this screen.</Text>
-      <Link href="/about" style={styles.button}>
-        Go to about About screen
-      </Link>
+      <View style={styles.imageContainer}>
+        <Image
+          source={PlaceholderImage}
+          style={styles.image}
+          contentFit="contain"
+        />
+      </View>
     </View>
   );
 }
@@ -18,14 +23,13 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#25292e",
-    gap: 30,
   },
-  text: {
-    color: "#fff",
+  imageContainer: {
+    flex: 1,
   },
-  button: {
-    fontSize: 20,
-    textDecorationLine: "underline",
-    color: "#fff",
+  image: {
+    width: 320,
+    height: 440,
+    borderRadius: 18,
   },
 });
