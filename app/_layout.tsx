@@ -19,9 +19,8 @@ export default function RootLayout() {
 
   return (
     <Stack>
-      <Stack.Screen name="index" options={homeScreenStackOptions} />
-      <Stack.Screen name="about" options={{ title: "About" }} />
-      <Stack.Screen name="+not-found" options={{ title: "Oops! Not Found" }} />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="+not-found" options={{ title: "Not found" }} />
     </Stack>
   );
 }
