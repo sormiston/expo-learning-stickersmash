@@ -8,7 +8,6 @@
     "scheme": "stickersmash",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "backgroundColor": "#25292e",
     "ios": {
       "supportsTablet": true
     },
