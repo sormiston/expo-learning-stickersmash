@@ -1,22 +1,15 @@
 import { Image } from "expo-image";
-import { StyleSheet, View } from "react-native";
+import { ImageSourcePropType, StyleSheet } from "react-native";
 
 type ImageViewerProps = {
-  imgSource: React.ComponentPropsWithoutRef<typeof Image>["source"];
+  imgSource: ImageSourcePropType;
 };
 
 export default function ImageViewer({ imgSource }: ImageViewerProps) {
-  return (
-    <View style={styles.imageContainer}>
-      <Image source={imgSource} style={styles.image} contentFit="contain" />
-    </View>
-  );
+  return <Image source={imgSource} style={styles.image} />;
 }
 
 const styles = StyleSheet.create({
-  imageContainer: {
-    flex: 1,
-  },
   image: {
     width: 320,
     height: 440,
