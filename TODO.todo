@@ -3,3 +3,12 @@ Enhancements:
     ☐ circular crop mask in image pick flow
     ☐ (icon) font preloading
     ☐ change "double-tap for scale level" gesture in EmojiSticker to "pinch for fluid scaling"
+    ☐ improve quality of screenshot save
+
+Bugs:
+    ☐ dark text on dark background color of native select menu when editing/cropping image from MediaLibrary
+
+Insights:
+    ☐ create a list of all react native libraries and expo modules used in this project.  Collect this documentation to a centralized place for reference.
+    ☐ go deeper on MediaLibraryPermissions.  How does this really work?  Why does it appear that permissions are already given, always (during dev)?
+    
