@@ -9,3 +9,5 @@ declare module "*.png" {
     uri,
   };
 }
+
+declare module "dom-to-image";
