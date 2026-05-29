@@ -12,6 +12,7 @@ type Props = {
 };
 
 export default function EmojiSticker({ imageSize, stickerSource }: Props) {
+  // ANIMATED GESTURE: double tap to scale image
   const scaleImage = useSharedValue(imageSize);
   const doubleTap = Gesture.Tap()
     .numberOfTaps(2)
@@ -27,15 +28,39 @@ export default function EmojiSticker({ imageSize, stickerSource }: Props) {
     height: withSpring(scaleImage.value),
   }));
 
+  // ANIMATED GESTURE: pan to translate container
+  const translateX = useSharedValue(0);
+  const translateY = useSharedValue(0);
+  const pan = Gesture.Pan().onChange((event) => {
+    translateX.value = event.translationX;
+    translateY.value = event.translationY;
+  });
+  const containerStyle = useAnimatedStyle(() => ({
+    transform: [
+      { translateX: withSpring(translateX.value) },
+      { translateY: withSpring(translateY.value) },
+    ],
+  }));
+
   return (
-    // <View style={{ top: -350, borderColor: 'red', borderWidth: 1 }}>
-    <GestureDetector gesture={doubleTap}>
-      <Animated.Image
-        source={stickerSource}
-        style={[imageStyle, { top: -350, width: imageSize, height: imageSize }]}
-        resizeMode="contain"
-      />
+    <GestureDetector gesture={pan}>
+      <Animated.View
+        style={[
+          containerStyle,
+          {
+            top: -350,
+            alignSelf: "flex-start",
+          },
+        ]}
+      >
+        <GestureDetector gesture={doubleTap}>
+          <Animated.Image
+            source={stickerSource}
+            style={[imageStyle, { width: imageSize, height: imageSize }]}
+            resizeMode="contain"
+          />
+        </GestureDetector>
+      </Animated.View>
     </GestureDetector>
-    /* </View> */
   );
 }

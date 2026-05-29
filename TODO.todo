@@ -2,3 +2,4 @@ Enhancements:
     ☐ responsive design through tablet breakpoints
     ☐ circular crop mask in image pick flow
     ☐ (icon) font preloading
+    ☐ change "double-tap for scale level" gesture in EmojiSticker to "pinch for fluid scaling"

@@ -1,0 +1,1 @@
+- [PR to tutorial?]: emoji sticker container (with drag handler) is full-width without the "alignSelf" trick.  That makes some weird behavior (possible to pan at points horizontal to the emoji sticker, bad)
