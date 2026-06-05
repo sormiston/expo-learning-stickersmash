@@ -1,9 +1,11 @@
 Enhancements:
     ☐ responsive design through tablet breakpoints
     ☐ circular crop mask in image pick flow
-    ☐ (icon) font preloading
+    ✘ (icon) font preloading @cancelled (05/06/2026, 17:17:27)
     ☐ change "double-tap for scale level" gesture in EmojiSticker to "pinch for fluid scaling"
     ☐ improve quality of screenshot save
+    ☐ add some kind of bug report / user feedback capture to Preview build (and ONLY Preview build)
+    ☐ TESTING
 
 Bugs:
     ☐ dark text on dark background color of native select menu when editing/cropping image from MediaLibrary
