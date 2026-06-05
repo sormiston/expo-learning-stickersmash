@@ -18,18 +18,11 @@ const getAppName = (): string => {
   return "StickerSmash: Emoji Stickers";
 };
 
-const getAppSlug = (): string => {
-  const baseSlug = "sticker-smash";
-  if (IS_DEV) return baseSlug + "-dev";
-  if (IS_PREVIEW) return baseSlug + "-preview";
-
-  return baseSlug;
-};
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   name: getAppName(),
-  slug: getAppSlug(),
+  slug: config.slug!,
   ios: {
     ...config.ios,
     bundleIdentifier: getUniqueIdentifier(),
