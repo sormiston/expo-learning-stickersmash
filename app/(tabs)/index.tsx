@@ -8,7 +8,7 @@ import IconButton from "@/components/IconButton";
 import ImageViewer from "@/components/ImageViewer";
 import domtoimage from "dom-to-image";
 import * as ImagePicker from "expo-image-picker";
-import * as MediaLibrary from "expo-media-library";
+import { Asset } from "expo-media-library";
 import { useEffect, useRef, useState } from "react";
 import { ImageSourcePropType, Platform, StyleSheet, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
@@ -73,8 +73,8 @@ export default function Index() {
           height: 440,
           quality: 1,
         });
-
-        await MediaLibrary.saveToLibraryAsync(localUri);
+        console.log(localUri);
+        await Asset.create(localUri);
         if (localUri) alert("Saved!");
       } catch (error) {
         console.error(error);

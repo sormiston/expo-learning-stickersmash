@@ -6,9 +6,11 @@ Enhancements:
     ☐ improve quality of screenshot save
     ☐ add some kind of bug report / user feedback capture to Preview build (and ONLY Preview build)
     ☐ TESTING
+    ☐ 
 
 Bugs:
     ☐ dark text on dark background color of native select menu when editing/cropping image from MediaLibrary
+    ☐ (SDK-56) tab navigation font color is dark on dark background (headerTintColor prop not working?)
 
 Insights:
     ☐ create a list of all react native libraries and expo modules used in this project.  Collect this documentation to a centralized place for reference.
