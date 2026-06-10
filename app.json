@@ -41,8 +41,10 @@
       [
         "expo-sharing",
         {
-          "enabled": true,
-          "singleShareMimeTypes": ["image/*"]
+          "android": {
+            "enabled": true,
+            "singleShareMimeTypes": ["image/*"]
+          }
         }
       ]
     ],
